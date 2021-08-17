@@ -10,6 +10,7 @@ const handleDragStart = (e) => e.preventDefault();
 const Gallery = ({ id, media_type }) => {
  const [credits, setCredits] = useState([]);
 
+ 
  const items = credits.map((c) => (
   <div className="carouselItem">
    <img

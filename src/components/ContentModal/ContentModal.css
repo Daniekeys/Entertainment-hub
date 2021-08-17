@@ -20,10 +20,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  height: auto;
   width: 100%;
   overflow-y: scroll;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
 .ContentModal::-webkit-scrollbar {
@@ -61,6 +61,8 @@
   text-align: justify;
 }
 
+
+
 .ContentModal__description::-webkit-scrollbar {
   display: none;
 }
@@ -89,4 +91,17 @@
   .ContentModal__description {
     font-size: 22px;
   }
+}
+
+@media (max-width:600px) {
+  .ContentModal__description {
+  display: none;
+  height: 40%;
+  overflow-y: scroll;
+  padding: 15px;
+  border-radius: 20px;
+  scrollbar-width: thin; /* Firefox */
+  box-shadow: inset 0 0 5px #000000;
+  text-align: justify;
+}
 }

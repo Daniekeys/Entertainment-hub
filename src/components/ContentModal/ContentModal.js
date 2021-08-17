@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   alignItems: "center",
   justifyContent: "center",
   padding:theme.spacing(2),
+  height:"auto",
  },
  paper: {
   width: "90%",
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   color: "white",
   
   boxShadow: theme.shadows[5],
-  padding: theme.spacing(4, 2),
+  padding: theme.spacing(1, 1,3),
  },
 }));
 
