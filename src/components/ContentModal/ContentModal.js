@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
  paper: {
   width: "90%",
   height: "auto",
+  [theme.breakpoints.up("sm")] : {
+    height:"80%",
+  },
   backgroundColor: "#39445a",
   border: "1px solid #282c34",
   borderRadius: 10,
