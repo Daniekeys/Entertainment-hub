@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   width: "90%",
   height: "auto",
   [theme.breakpoints.up("sm")] : {
-    height:"80%",
+    height:"90%",
   },
   backgroundColor: "#39445a",
   border: "1px solid #282c34",
@@ -36,6 +36,13 @@ const useStyles = makeStyles((theme) => ({
   boxShadow: theme.shadows[5],
   padding: theme.spacing(1, 1,3),
  },
+ close:{
+   display:"none",
+   [theme.breakpoints.down("sm")]: {
+     display:"block",
+   }
+
+ }
 }));
 
 export default function TransitionsModal({ children, media_type, id }) {
@@ -119,6 +126,12 @@ export default function TransitionsModal({ children, media_type, id }) {
          alt={content.name || content.title}
          className="ContentModal__landscape"
         />
+        <Button variant="contained" color="secondary" onClick={handleClose} className={classes.close}
+        size="small"
+        >
+          Close
+
+        </Button>
         <div className="ContentModal__about">
          <span className="ContentModal__title">
           {content.name || content.title} (
