@@ -142,6 +142,7 @@ export default function TransitionsModal({ children, media_type, id }) {
           variant="contained"
           startIcon={<YouTubeIcon />}
           color="secondary"
+          className="youtube"
           target="__blank"
           href={`https://www.youtube.com/watch?v=${video}`}
          >
