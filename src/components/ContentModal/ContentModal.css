@@ -113,4 +113,15 @@
   overflow-y: scroll;
   scrollbar-width: thin;
 }
+.ContentModal__about {
+  padding: 10px;
+  padding-top: 0;
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-evenly;
+  font-weight: 300;
+}
 }
