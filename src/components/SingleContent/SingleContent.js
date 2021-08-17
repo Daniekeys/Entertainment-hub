@@ -15,9 +15,10 @@ const SingleContent = ({
 
 }) => {
  
+
  return (
   <ContentModal className="media" media_type={media_type} id={id} >
-  <Badge badgeContent={vote_average} color={vote_average > 6 ? "primary" : "secondary"} />
+  <Badge badgeContent={vote_average} color={vote_average > 6 ? "primary" : "secondary"} size="medium"  />
    <img src={ poster ? `${img_300}/${poster}` : unavailable} alt={title} 
    className="poster"  />
    <b className="title">

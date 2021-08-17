@@ -19,16 +19,18 @@ const useStyles = makeStyles((theme) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  padding:theme.spacing(2),
  },
  paper: {
   width: "90%",
-  height: "80%",
+  height: "auto",
   backgroundColor: "#39445a",
   border: "1px solid #282c34",
   borderRadius: 10,
   color: "white",
+  
   boxShadow: theme.shadows[5],
-  padding: theme.spacing(1, 1, 3),
+  padding: theme.spacing(4, 2),
  },
 }));
 
@@ -152,4 +154,5 @@ export default function TransitionsModal({ children, media_type, id }) {
    </Modal>
   </>
  );
+
 }

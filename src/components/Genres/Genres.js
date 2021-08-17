@@ -6,6 +6,18 @@ import Chip from '@material-ui/core/Chip';
 import FaceIcon from '@material-ui/icons/Face';
 import DoneIcon from '@material-ui/icons/Done';
 
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    '& > *': {
+      margin: theme.spacing(0.5),
+    },
+  },
+
+}));
 const Genres = ({
  selectedGenres,  genres   , 
   setGenres,
@@ -14,7 +26,7 @@ const Genres = ({
   type
 }) => {
 
-
+const classes = useStyles();
 const handleAdd = (genre) => {
   setSelectedGenres([...selectedGenres, genre]);
   setGenres(genres.filter((g) => g.id !== genre.id))
@@ -48,16 +60,21 @@ return () => {
 
 
  return (
-  <div 
+  <div  className={classes.root}
   style={{padding: "6px 0"}}
   >
      {selectedGenres && selectedGenres.map((genre) => {
        return (
 
          <Chip label={genre.name}
-           style={{ margin: 2 }}
+           style={{ margin: 2,
+          }}
+          className={classes.chip}
            clickable size="small" key={genre.id}
            color="primary"
+
+           size="medium"
+           variant="default"
            onDelete={() => handleRemove(genre)}
          />
        )
@@ -67,10 +84,13 @@ return () => {
     return (
 
       <Chip label={genre.name}
-      style={{margin:2}}
-      clickable size="small" key={genre.id}
+      style={{margin:2,
+      fontWeight:600,
+      
+      }}
+      clickable size="medium" key={genre.id}
       onClick={() => handleAdd(genre)}
-
+        color="primary"
       />
     )
   })}
