@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
    display:"none",
    [theme.breakpoints.down("sm")]: {
      display:"block",
-   }
+   },
+   marginBottom:theme.spacing(1),
 
  }
 }));
@@ -129,7 +130,7 @@ export default function TransitionsModal({ children, media_type, id }) {
         <Button variant="contained" color="secondary" onClick={handleClose} className={classes.close}
         size="small"
         >
-          Close
+          Close info
 
         </Button>
         <div className="ContentModal__about">
